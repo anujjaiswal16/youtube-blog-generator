@@ -1,0 +1,16 @@
+{
+  "name": "TranscriptAgent.get_transcript",
+  "description": "Extracts and returns the clean transcript text from a YouTube video URL. This is the first step in the workflow to convert a YouTube video into a blog post.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "video_url": {
+        "type": "string",
+        "description": "The full YouTube video URL (e.g., https://youtube.com/watch?v=VIDEO_ID or https://youtu.be/VIDEO_ID)"
+      }
+    },
+    "required": ["video_url"]
+  },
+  "type": "function"
+}
+

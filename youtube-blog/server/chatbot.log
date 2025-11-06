@@ -1,0 +1,74 @@
+2025-11-06 12:31:15,918 - __main__ - INFO - WebSocket connection attempt from 127.0.0.1:59882
+2025-11-06 12:31:15,919 - __main__ - INFO - WebSocket connection accepted from 127.0.0.1:59882
+2025-11-06 12:31:31,340 - __main__ - INFO - Received message from 127.0.0.1:59882: message
+2025-11-06 12:31:31,341 - __main__ - INFO - Processing user message: uMzUB89uSxU...
+2025-11-06 12:31:31,341 - __main__ - INFO - Starting plan execution in worker thread
+2025-11-06 12:31:31,341 - __main__ - INFO - Execution thread started
+2025-11-06 12:31:31,342 - client.mcp_client - INFO - Fetching tools from MCP server: http://localhost:8000
+2025-11-06 12:31:31,359 - client.mcp_client - INFO - Retrieved 4 tools in 0.02s
+2025-11-06 12:31:31,360 - __main__ - INFO - [0.0s] Progress: 🤖 Analyzing your request and creating an execution plan...
+2025-11-06 12:31:31,360 - client.mcp_client - INFO - Sending planning request to LLM
+2025-11-06 12:31:33,379 - httpx - INFO - HTTP Request: POST https://litellm-proxy-service-1059491012611.us-central1.run.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 12:31:33,392 - client.mcp_client - INFO - LLM planning completed in 2.03s
+2025-11-06 12:31:33,392 - __main__ - INFO - [2.1s] Progress: [1/3] Extracts the clean transcript text from the YouTube video URL.
+2025-11-06 12:31:33,392 - client.mcp_client - INFO - Executing step 1/3: TranscriptAgent.get_transcript
+2025-11-06 12:31:33,392 - __main__ - INFO - [2.1s] Progress: [1/3] Executing: Extracts the clean transcript text from the YouTube video URL.
+2025-11-06 12:31:33,393 - client.mcp_client - INFO - Calling tool: TranscriptAgent.get_transcript with inputs: ['video_url']
+2025-11-06 12:31:34,832 - client.mcp_client - INFO - Tool TranscriptAgent.get_transcript completed in 1.44s
+2025-11-06 12:31:34,833 - client.mcp_client - INFO - Step 1 completed in 1.44s. Output keys: ['clean_transcript']
+2025-11-06 12:31:34,833 - __main__ - INFO - [3.5s] Progress: ✓ Step 1 completed in 1.4s: TranscriptAgent.get_transcript
+2025-11-06 12:31:34,833 - __main__ - INFO - [3.5s] Progress: [2/3] Generates a well-structured blog post in markdown format from the clean transcript.
+2025-11-06 12:31:34,834 - client.mcp_client - INFO - Executing step 2/3: BlogAgent.generate_blog
+2025-11-06 12:31:34,834 - __main__ - INFO - [3.5s] Progress: [2/3] Executing: Generates a well-structured blog post in markdown format from the clean transcript.
+2025-11-06 12:31:34,834 - client.mcp_client - INFO - Calling tool: BlogAgent.generate_blog with inputs: ['clean_transcript', 'tone']
+2025-11-06 12:31:45,695 - client.mcp_client - INFO - Tool BlogAgent.generate_blog completed in 10.86s
+2025-11-06 12:31:45,696 - client.mcp_client - INFO - Step 2 completed in 10.86s. Output keys: ['blog_markdown']
+2025-11-06 12:31:45,696 - __main__ - INFO - [14.4s] Progress: ✓ Step 2 completed in 10.9s: BlogAgent.generate_blog
+2025-11-06 12:31:45,696 - __main__ - INFO - [14.4s] Progress: [3/3] Exports the final blog post to both DOCX and PDF formats for publishing or sharing.
+2025-11-06 12:31:45,696 - client.mcp_client - INFO - Executing step 3/3: ExporterAgent.export_blog
+2025-11-06 12:31:45,696 - __main__ - INFO - [14.4s] Progress: [3/3] Executing: Exports the final blog post to both DOCX and PDF formats for publishing or sharing.
+2025-11-06 12:31:45,696 - client.mcp_client - INFO - Calling tool: ExporterAgent.export_blog with inputs: ['blog_markdown', 'include_images']
+2025-11-06 12:31:45,748 - client.mcp_client - INFO - Tool ExporterAgent.export_blog completed in 0.05s
+2025-11-06 12:31:45,748 - client.mcp_client - INFO - Step 3 completed in 0.05s. Output keys: ['docx_url', 'pdf_url']
+2025-11-06 12:31:45,748 - __main__ - INFO - [14.4s] Progress: ✓ Step 3 completed in 0.1s: ExporterAgent.export_blog
+2025-11-06 12:31:45,748 - __main__ - INFO - Plan execution completed in 14.4 seconds
+2025-11-06 12:31:45,748 - __main__ - INFO - Sending result to client
+2025-11-06 12:40:09,270 - __main__ - INFO - WebSocket disconnected from 127.0.0.1:59882
+2025-11-06 13:38:30,379 - __main__ - INFO - WebSocket connection attempt from 127.0.0.1:60421
+2025-11-06 13:38:30,379 - __main__ - INFO - WebSocket connection accepted from 127.0.0.1:60421
+2025-11-06 13:40:49,266 - __main__ - INFO - WebSocket disconnected from 127.0.0.1:60421
+2025-11-06 13:40:57,541 - __main__ - INFO - WebSocket connection attempt from 127.0.0.1:60549
+2025-11-06 13:40:57,542 - __main__ - INFO - WebSocket connection accepted from 127.0.0.1:60549
+2025-11-06 13:43:41,914 - __main__ - INFO - Received message from 127.0.0.1:60549: message
+2025-11-06 13:43:41,915 - __main__ - INFO - Processing user message: Yq0QkCxoTHM...
+2025-11-06 13:43:41,916 - __main__ - INFO - Starting plan execution in worker thread
+2025-11-06 13:43:41,916 - __main__ - INFO - Execution thread started
+2025-11-06 13:43:41,916 - client.mcp_client - INFO - Fetching tools from MCP server: http://localhost:8000
+2025-11-06 13:43:41,953 - client.mcp_client - INFO - Retrieved 4 tools in 0.04s
+2025-11-06 13:43:41,953 - __main__ - INFO - [0.0s] Progress: 🤖 Analyzing your request and creating an execution plan...
+2025-11-06 13:43:41,953 - client.mcp_client - INFO - Sending planning request to LLM
+2025-11-06 13:43:43,929 - httpx - INFO - HTTP Request: POST https://litellm-proxy-service-1059491012611.us-central1.run.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 13:43:43,943 - client.mcp_client - INFO - LLM planning completed in 1.99s
+2025-11-06 13:43:43,944 - __main__ - INFO - [2.0s] Progress: [1/3] Extracts the clean transcript text from the YouTube video.
+2025-11-06 13:43:43,945 - client.mcp_client - INFO - Executing step 1/3: TranscriptAgent.get_transcript
+2025-11-06 13:43:43,945 - __main__ - INFO - [2.0s] Progress: [1/3] Executing: Extracts the clean transcript text from the YouTube video.
+2025-11-06 13:43:43,945 - client.mcp_client - INFO - Calling tool: TranscriptAgent.get_transcript with inputs: ['video_url']
+2025-11-06 13:43:45,305 - client.mcp_client - INFO - Tool TranscriptAgent.get_transcript completed in 1.36s
+2025-11-06 13:43:45,306 - client.mcp_client - INFO - Step 1 completed in 1.36s. Output keys: ['clean_transcript']
+2025-11-06 13:43:45,306 - __main__ - INFO - [3.4s] Progress: ✓ Step 1 completed in 1.4s: TranscriptAgent.get_transcript
+2025-11-06 13:43:45,306 - __main__ - INFO - [3.4s] Progress: [2/3] Generates a well-structured blog post in markdown format from the clean transcript.
+2025-11-06 13:43:45,307 - client.mcp_client - INFO - Executing step 2/3: BlogAgent.generate_blog
+2025-11-06 13:43:45,307 - __main__ - INFO - [3.4s] Progress: [2/3] Executing: Generates a well-structured blog post in markdown format from the clean transcript.
+2025-11-06 13:43:45,307 - client.mcp_client - INFO - Calling tool: BlogAgent.generate_blog with inputs: ['clean_transcript', 'tone']
+2025-11-06 13:44:07,499 - client.mcp_client - INFO - Tool BlogAgent.generate_blog completed in 22.19s
+2025-11-06 13:44:07,499 - client.mcp_client - INFO - Step 2 completed in 22.19s. Output keys: ['blog_markdown']
+2025-11-06 13:44:07,499 - __main__ - INFO - [25.6s] Progress: ✓ Step 2 completed in 22.2s: BlogAgent.generate_blog
+2025-11-06 13:44:07,499 - __main__ - INFO - [25.6s] Progress: [3/3] Exports the final blog post to DOCX and PDF formats for publishing or sharing.
+2025-11-06 13:44:07,499 - client.mcp_client - INFO - Executing step 3/3: ExporterAgent.export_blog
+2025-11-06 13:44:07,500 - __main__ - INFO - [25.6s] Progress: [3/3] Executing: Exports the final blog post to DOCX and PDF formats for publishing or sharing.
+2025-11-06 13:44:07,500 - client.mcp_client - INFO - Calling tool: ExporterAgent.export_blog with inputs: ['blog_markdown', 'include_images']
+2025-11-06 13:44:07,554 - client.mcp_client - INFO - Tool ExporterAgent.export_blog completed in 0.05s
+2025-11-06 13:44:07,554 - client.mcp_client - INFO - Step 3 completed in 0.05s. Output keys: ['docx_url', 'pdf_url']
+2025-11-06 13:44:07,554 - __main__ - INFO - [25.6s] Progress: ✓ Step 3 completed in 0.1s: ExporterAgent.export_blog
+2025-11-06 13:44:07,554 - __main__ - INFO - Plan execution completed in 25.6 seconds
+2025-11-06 13:44:07,554 - __main__ - INFO - Sending result to client

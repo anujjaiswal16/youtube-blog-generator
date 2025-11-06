@@ -1,0 +1,22 @@
+{
+  "name": "VisualAgent.generate_diagram",
+  "description": "Generates architecture or flow diagrams for the blog content. This helps visualize concepts, workflows, or system architectures mentioned in the transcript/blog.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "context_text": {
+        "type": "string",
+        "description": "The text context from the blog or transcript that describes what diagram needs to be created"
+      },
+      "diagram_type": {
+        "type": "string",
+        "description": "The type of diagram to generate (e.g., 'architecture', 'flow', 'sequence', 'er-diagram', 'mindmap')",
+        "default": "architecture",
+        "enum": ["architecture", "flow", "sequence", "er-diagram", "mindmap", "network"]
+      }
+    },
+    "required": ["context_text"]
+  },
+  "type": "function"
+}
+

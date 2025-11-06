@@ -1,0 +1,40 @@
+2025-11-06 12:31:31,353 - server - INFO - JSON-RPC request from 127.0.0.1: method=list_tools
+2025-11-06 12:31:31,356 - server - INFO - Returning 4 tools
+2025-11-06 12:31:33,399 - server - INFO - JSON-RPC request from 127.0.0.1: method=call_tool
+2025-11-06 12:31:33,399 - server - INFO - Calling tool: TranscriptAgent.get_transcript with inputs: ['video_url']
+2025-11-06 12:31:33,399 - agents.transcript_agent - INFO - Starting transcript extraction for: https://youtu.be/uMzUB89uSxU
+2025-11-06 12:31:33,400 - agents.transcript_agent - INFO - Extracted video ID: uMzUB89uSxU
+2025-11-06 12:31:33,400 - agents.transcript_agent - INFO - Fetching transcript from YouTube...
+2025-11-06 12:31:34,825 - agents.transcript_agent - INFO - Retrieved 123 transcript segments
+2025-11-06 12:31:34,825 - agents.transcript_agent - INFO - Transcript extraction completed in 1.43s. Text length: 4243 characters
+2025-11-06 12:31:34,829 - server - INFO - Tool TranscriptAgent.get_transcript completed successfully in 1.43s
+2025-11-06 12:31:34,843 - server - INFO - JSON-RPC request from 127.0.0.1: method=call_tool
+2025-11-06 12:31:34,844 - server - INFO - Calling tool: BlogAgent.generate_blog with inputs: ['clean_transcript', 'tone']
+2025-11-06 12:31:34,844 - agents.blog_agent - INFO - Starting blog generation. Transcript length: 4243 chars, Tone: educational
+2025-11-06 12:31:34,844 - agents.blog_agent - INFO - Sending blog generation request to LLM...
+2025-11-06 12:31:45,677 - httpx - INFO - HTTP Request: POST https://litellm-proxy-service-1059491012611.us-central1.run.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 12:31:45,692 - agents.blog_agent - INFO - Blog generation completed in 10.85s. Blog length: 6622 characters
+2025-11-06 12:31:45,693 - server - INFO - Tool BlogAgent.generate_blog completed successfully in 10.85s
+2025-11-06 12:31:45,703 - server - INFO - JSON-RPC request from 127.0.0.1: method=call_tool
+2025-11-06 12:31:45,703 - server - INFO - Calling tool: ExporterAgent.export_blog with inputs: ['blog_markdown', 'include_images']
+2025-11-06 12:31:45,747 - server - INFO - Tool ExporterAgent.export_blog completed successfully in 0.04s
+2025-11-06 13:43:41,937 - server - INFO - JSON-RPC request from 127.0.0.1: method=list_tools
+2025-11-06 13:43:41,947 - server - INFO - Returning 4 tools
+2025-11-06 13:43:43,950 - server - INFO - JSON-RPC request from 127.0.0.1: method=call_tool
+2025-11-06 13:43:43,950 - server - INFO - Calling tool: TranscriptAgent.get_transcript with inputs: ['video_url']
+2025-11-06 13:43:43,951 - agents.transcript_agent - INFO - Starting transcript extraction for: https://youtube.com/watch?v=Yq0QkCxoTHM
+2025-11-06 13:43:43,951 - agents.transcript_agent - INFO - Extracted video ID: Yq0QkCxoTHM
+2025-11-06 13:43:43,951 - agents.transcript_agent - INFO - Fetching transcript from YouTube...
+2025-11-06 13:43:45,300 - agents.transcript_agent - INFO - Retrieved 243 transcript segments
+2025-11-06 13:43:45,301 - agents.transcript_agent - INFO - Transcript extraction completed in 1.35s. Text length: 9248 characters
+2025-11-06 13:43:45,303 - server - INFO - Tool TranscriptAgent.get_transcript completed successfully in 1.35s
+2025-11-06 13:43:45,312 - server - INFO - JSON-RPC request from 127.0.0.1: method=call_tool
+2025-11-06 13:43:45,313 - server - INFO - Calling tool: BlogAgent.generate_blog with inputs: ['clean_transcript', 'tone']
+2025-11-06 13:43:45,313 - agents.blog_agent - INFO - Starting blog generation. Transcript length: 9248 chars, Tone: educational
+2025-11-06 13:43:45,313 - agents.blog_agent - INFO - Sending blog generation request to LLM...
+2025-11-06 13:44:07,495 - httpx - INFO - HTTP Request: POST https://litellm-proxy-service-1059491012611.us-central1.run.app/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 13:44:07,498 - agents.blog_agent - INFO - Blog generation completed in 22.18s. Blog length: 8182 characters
+2025-11-06 13:44:07,498 - server - INFO - Tool BlogAgent.generate_blog completed successfully in 22.19s
+2025-11-06 13:44:07,503 - server - INFO - JSON-RPC request from 127.0.0.1: method=call_tool
+2025-11-06 13:44:07,503 - server - INFO - Calling tool: ExporterAgent.export_blog with inputs: ['blog_markdown', 'include_images']
+2025-11-06 13:44:07,553 - server - INFO - Tool ExporterAgent.export_blog completed successfully in 0.05s

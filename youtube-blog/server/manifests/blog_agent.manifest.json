@@ -1,0 +1,21 @@
+{
+  "name": "BlogAgent.generate_blog",
+  "description": "Generates a well-formatted blog post in markdown format from a clean transcript using GPT-4. The blog is created with proper structure, formatting, and educational content.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "clean_transcript": {
+        "type": "string",
+        "description": "The clean transcript text extracted from the YouTube video (usually from TranscriptAgent.get_transcript)"
+      },
+      "tone": {
+        "type": "string",
+        "description": "The tone/style for the blog post (e.g., 'educational', 'casual', 'professional', 'conversational')",
+        "default": "educational"
+      }
+    },
+    "required": ["clean_transcript"]
+  },
+  "type": "function"
+}
+
