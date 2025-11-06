@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 # Custom LiteLLM proxy endpoint
 openai_client = OpenAI(
-    base_url="OPEN_AI_URL" #replace OPEN_AI_URL with actula url
+    base_url="OPENAI_URL" #replace OPENAI_URL with actual url
 )
 
 class MCPClient:
