@@ -18,6 +18,7 @@ The system includes:
 ```bash
 unzip youtube-blog-mcp.zip
 cd youtube-blog-mcp
+In mcp_client.py and in agents/blog_agent.py add the OpenAI url.
 ```
 
 ### 2. Install Dependencies
